@@ -33,15 +33,20 @@ export const task = config => {
 						module: {
 							rules: [
 								{
-									test: /\.(js|jsx)$/,
+									test: /\.vue$/,
+									loader: 'vue-loader',
 									exclude: /node_modules/,
-									use: ['babel-loader']
+								},
+								{
+									test: /\.js$/,
+									exclude: /node_modules/,
+									loader: "babel-loader"
 								}
 							]
 						},
-						resolve: {
-							extensions: ['*', '.js', '.jsx']
-						},
+						plugins: [
+							new VueLoaderPlugin()
+						],
 						optimization: {
 							minimize: false
 						},
@@ -49,8 +54,7 @@ export const task = config => {
 							filename: `${bundle}.js`
 						},
 						externals: {
-							"React": "React",
-							"ReactDOM": "ReactDOM"
+							"vue": "Vue"
 						}
 					}, webpack)
 				)

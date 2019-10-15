@@ -2,8 +2,6 @@
 	"name": "HelloIssueTracker",
 	"dependencies": {
 		"moment": "^2.22.2",
-		"react": "^16.10.2",
-		"react-dom": "^16.10.2",
 		"showdown": "^1.9.0"
 	},
 	"devDependencies": {
@@ -38,11 +36,10 @@
 	},
 	"babel": {
 		"presets": [
-			"@babel/preset-env",
-			"@babel/preset-react"
+			"@babel/env"
 		]
 	},
-	"version": "react0.1.21",
+	"version": "vueJS0.1.22",
 	"main": "gulpfile.babel.js",
 	"browserslist": [
 		"> 1%",

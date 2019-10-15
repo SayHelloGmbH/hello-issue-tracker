@@ -12,12 +12,5 @@ if ('HelloIssueTrackerConfig' in window) {
 	});
 }
 
-export const strings = key => {
-	if (key in pluginStrings) {
-		return pluginStrings[key];
-	}
-	console.warn(`'${key}' not found in plugin strings`);
-	return '';
-};
-
+export const strings = pluginStrings;
 export const config = pluginConfig;

@@ -35,7 +35,7 @@ export const watch = () => {
 	livereload.listen();
 
 	gulp.watch(config.assetsBuild + 'styles/**/*.scss', settings, gulp.series(styles));
-	gulp.watch(config.assetsBuild + 'scripts/**/*.{js,jsx}', settings, gulp.series(scripts));
+	gulp.watch(config.assetsBuild + 'scripts/**/*.{js,vue}', settings, gulp.series(scripts));
 	gulp.watch([config.assetsDir + '**/*.svg', '!' + config.assetsDir + '**/*.min.svg'], settings, gulp.series(svg));
 	gulp.watch(config.reload).on('change', livereload.changed);
 };
